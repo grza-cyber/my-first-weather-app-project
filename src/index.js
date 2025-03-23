@@ -14,7 +14,7 @@ function formatDate() {
 
 
 function displayTemperature(response) {
-    let temperatureElement = document.querySelector("#temperatures");
+    let temperatureElement = document.querySelector("#temp-value");
     let currentTemperature = Math.round(response.data.temperature.current);
     temperatureElement.innerHTML = currentTemperature;
     let cityHeader = document.querySelector("h1");
