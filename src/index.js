@@ -1,3 +1,18 @@
+function formatDate() {
+    let currentDate = new Date();
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let day = days[currentDate.getDay()];
+    let time = currentDate.getHours();
+    let minute = currentDate.getMinutes();
+    minute = ('0'+ currentDate.getMinutes()).slice(-2);
+    let currentDay = document.querySelector("#dayAndTime");
+    currentDay.innerHTML = `${day} ${time}:${minute}`;
+  }
+  
+
+  document.addEventListener("load", formatDate());
+
+
 function displayTemperature(response) {
     let temperatureElement = document.querySelector("#temperatures");
     let currentTemperature = Math.round(response.data.temperature.current);
